@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>css3</title>
+<meta name="keywords" content="css3" />
+<style>
+    body,html{
+        margin:0;
+        padding:0;
+    }
+    ul,li{
+        margin: 0;
+        padding:0;
+        list-style: none;
+    }
+    input:focus{ outline:none; }
+    .container{
+        font-size: 22px;
+        font-family: Arial;
+        margin:10px auto;
+        text-align: center;
+
+    }
+    .change-list{
+        margin-top:30px;
+        border-radius: 10px;
+        padding:5px 20px;
+        background: #fff;
+        border:1px solid #ccc;
+    }
+    .menu-list{
+        width: 80px;
+        margin:0 auto;
+        position: relative;
+        cursor: pointer;
+
+    }
+    .menu-list:hover{
+        color: pink;
+    }
+    .menu-list:hover.menu-list::after,.menu-list:hover.menu-list::before{
+        width: 50%;
+    }
+    .menu-list::after,.menu-list::before{
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        border-bottom: 5px solid #f1bdd0e3;
+        width: 0;
+        transition:width 0.2s linear .2s;;
+        -moz-transition:width .2s linear .2s;; /* Firefox 4 */
+        -webkit-transition:width .2s linear .2s;; /* Safari and Chrome */
+        -o-transition:width .2s linear .2s;; /* Opera */
+    }
+    .menu-list::after{
+        left:50%;
+    }
+    .menu-list::before{
+        right:50%;
+    }
+
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+    <div class="container">
+        <ul class="menu">
+            <li class="menu-list" id="menu-list">动画
+            </li>
+        </ul>
+        <input id="changeButton"  class="change-list"  type="button" value="切换样式"/>
+    </div>
+</div>
+</body>
+<script>
+   /* var changeButton=document.getElementById('changeButton');
+    var menuList=document.getElementById('menu-list');
+    var style = window.getComputedStyle(menuList, "::after");
+    console.log('22 %0',style.width)
+    changeButton.onclick=function(){
+	    style.width='50px'
+    	/!*for(let i=0; i<menuList.length;i++){
+    		if(menuList[i].classList.length>1){
+					    for(let j=0;j<menuList[i].classList.length;j++){
+							menuList[i].classList.remove("menu-list");
+					    }
+            }else{
+				menuList[i].classList.add("menu-list");
+            }
+        }*!/
+    }*/
+
+</script>
+</html>

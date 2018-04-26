@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>css3</title>
+<meta name="keywords" content="css3" />
+<style>
+    body,html{
+        margin:0;
+        padding:0;
+    }
+   .container{
+       width:800px;
+       height: 300px;
+       margin:10px auto;
+       padding:0 10px;
+       border:1px solid #ccc;
+       display: -webkit-flex;
+       display: -ms-flex;
+       display: -moz-flex;
+       display: flex;
+       align-items: center;
+       justify-content:space-between;
+   }
+   .box{
+       width: 56px;
+       height: 64px;
+       line-height: 67px;
+       text-align: center;
+       border:2px solid #ebebeb;
+       background: #f7f6f6;
+   }
+    .box5
+    {
+         matrix(1, 0, 0.45, 1, 30, 30);
+        -ms-transform:matrix(1,  0.95, 0, 1, 0, 55); /* IE 9 */
+        -moz-transform:matrix(1,  0.95, 0, 1, 0, 55); /* Firefox */
+        -webkit-transform:matrix(1,  0.95, 0, 1, 0, 55); /* Safari and Chrome */
+        -o-transform:matrix(1,  0.95, 0, 1, 0, 55); /* Opera */
+
+    }
+    .box4{
+        transform: translate(0px, 30px);
+        -ms-transform: translate(0px, 30px);		/* IE 9 */
+        -webkit-transform: translate(0px, 30px);	/* Safari and Chrome */
+        -o-transform: translate(0px, 30px);		/* Opera */
+        -moz-transform: translate(0px 30px);
+    }
+
+    .box3{
+        transform: rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+    }
+    .box2{
+        transform: scaleX(0.5);
+        -ms-transform: scaleX(0.5);	/* IE 9 */
+        -webkit-transform: scaleX(0.5);	/* Safari 和 Chrome */
+        -o-transform: scaleX(0.5);/* Opera */
+        -moz-transform: scaleX(0.5);	/* Firefox */
+    }
+    .box1{
+        transform:skewX(45deg);
+        -ms-transform:skewX(45deg);
+        -webkit-transform:skewX(45deg);
+        -o-transform:skewX(45deg);
+        -moz-transform:skewX(45deg)
+    }
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box ">box0</div>
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+    </div>
+
+</body>
+<script>
+
+
+</script>
+</html>
