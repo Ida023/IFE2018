@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+<input id="first-number" type="number" value="3" placeholder="第一个数字">
+<input id="second-number" type="number" value="4" placeholder="第二个数字">
+<button id="add-btn" onclick="add('1')">加</button>
+<button id="minus-btn" onclick="add('2')">减</button>
+<button id="times-btn" onclick="add('3')">乘</button>
+<button id="divide-btn" onclick="add('4')">除</button>
+<p id="result">运算结果</p>
+<script>
+
+
+function add(val){
+	let onenumber=parseInt(document.getElementById('first-number').value);
+	let twonumber=parseInt(document.getElementById('second-number').value);
+	let pText=document.getElementById('result');
+	if(typeof onenumber=='number' && typeof twonumber=='number'){
+			let Total=val=='1'?onenumber+twonumber:val=='2'?onenumber-twonumber:val=='3'?onenumber*twonumber:onenumber/twonumber;
+			pText.innerText=Total;
+    }else{
+			console.log('请输入数值！')
+    }
+}
+</script>
+</body>
+</html>
